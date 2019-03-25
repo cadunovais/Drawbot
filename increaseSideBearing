@@ -1,0 +1,9 @@
+from GlyphsApp import *
+
+myLayers = Glyphs.font.selectedLayers
+sbIncreaseFactor = 0.1
+
+for thisLayer in myLayers:
+    thisLayer.RSB += sbIncreaseFactor * thisLayer.RSB
+    thisLayer.LSB += sbIncreaseFactor * thisLayer.LSB
+    glyphWidth = thisLayer.width
